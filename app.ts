@@ -9,6 +9,9 @@ import indexRouter from "./routes/index";
 app.set('views',path.join(__dirname,'views'));
 app.set('view engine','ejs');  // 템플릿 엔진 설정
 
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+
 app.use('/',indexRouter);
 
 
